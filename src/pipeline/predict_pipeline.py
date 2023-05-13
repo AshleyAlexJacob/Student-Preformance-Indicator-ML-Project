@@ -21,7 +21,8 @@ class PredictPipeline:
             model = load_object(file_path= model_path)
             preprocessor = load_object(file_path= preprocessor_path)
             data_scaled = preprocessor.transform(features)
-            return model.predict(data_scaled)
+            pred =  model.predict(data_scaled)
+            return pred
         except Exception as e:
             raise CustomException(e,sys) from e
 
