@@ -73,3 +73,11 @@ def evaluate_model_hyperparameter_tuning(X_train,y_train,models:dict,X_test,y_te
 
     except Exception as e:
         raise CustomException(e,sys)
+    
+
+def load_object(file_path: str) -> object:
+    try:
+        with open(file_path, "rb") as file:
+            return dill.load(file)
+    except Exception as e:
+        raise CustomException(e, sys) from e
