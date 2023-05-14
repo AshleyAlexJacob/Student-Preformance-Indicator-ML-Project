@@ -63,7 +63,7 @@ class CustomData:
                 "reading score": [self.reading_score],
                 "writing score": [self.writing_score],
             }
-
+            # returning the generated dataframe from the incoming data
             return pd.DataFrame(data_dict)
 
         except Exception as e:
